@@ -1,0 +1,128 @@
+http://fatalita.sakura.ne.jp/Links/index/index.html
+http://www.arcpit.co.jp/winapi/api_02/index.htm
+http://www.plustarnet.com/aspil/Programming/
+http://minus273.s27.xrea.com/game/c.html
+http://www.kumei.ne.jp/c_lang/sdk/sdk_15.htm
+
+
+*******************************************************************************
+*******************************************************************************
+
+
+2-1-1. 関連ＡＰＩとその動作
+
+　クラスとプロシージャそしてメッセージに関係したＡＰＩを列記します。クラスとプロシージャに関しては、そう多くはありません。またＡＰＩの仕様も、特に難しいものはありません。しかしメッセージ関連のＡＰＩは、やや面倒です。
+
+メイン関数
+
+WinMain (CallBack) 	アプリケーションを初期化してメッセージループを処理
+
+クラスの登録と解除
+
+RegisterClass 	ウィンドウクラスを登録
+RegisterClassEx 	ウィンドウクラスを登録(WIN32)
+UnregisterClass 	登録しているウィンドウクラスを解除
+
+クラスの補足データ
+
+GetClassLong 	クラスに関連付けてる補足データ域から long 値を取得
+GetClassWord 	クラスに関連付けてる補足データ域からワード値を取得
+SetClassLong 	クラスに関連付けている補足データ域に long 値を設定
+SetClassWord 	クラスに関連付けている補足データ域にワード値を設定
+
+GetWindowLong 	ウィンドウに関連付けてる補足データ域から long 値を取得
+GetWindowWord 	ウィンドウに関連付けてる補足データ域からワード値を取得
+SetWindowLong 	ウィンドウに関連付けている補足データ域に long 値を設定
+SetWindowWord 	ウィンドウに関連付けている補足データ域にワード値を設定
+
+クラスの情報の取得
+
+GetClassName 	ウィンドウクラス名を取得
+GetClassInfo 	指定されたクラスに関する情報を取得
+GetClassInfoEx 	指定されたクラスに関する情報を取得(WIN32)
+
+プロシージャ
+
+CallWindowProc 	ウィンドウ関数にメッセージを渡す
+DefWindowProc 	デフォルトウィンドウプロシージャを呼び出す
+WndProc (CallBack) 	ウィンドウプロシージャ
+
+メッセージ関連の操作
+
+CallWndProc 	SendMessage関数からのメッセージをフィルタ化
+DefWindowProc 	デフォルトウィンドウプロシージャを呼び出す
+DispatchMessage 	ウィンドウにメッセージをディスパッチする
+GetInputState 	マウス､ キーボード､ タイマのキューの状態を判断
+GetMessage 	スレッドのメッセージ キューからメッセージを取得
+GetMessageExtraInfo 	ハードウェアメッセージに関する情報を取得
+GetMessagePos 	最後のメッセージのマウスカーソルの位置を返す
+GetMessageTime 	最後のメッセージが送られた時間を返す
+GetMsgProc 	GetMessageが取得したメッセージをフィルタする
+GetQueueStatus 	メッセージキューの内容を判断
+InSendMessage 	ウィンドウがSendMessageを処理しているか判断
+IsDialogMessage 	ダイアログボックスからのメッセージかを判断
+PeekMessage 	メッセージキューをチェック
+PostMessage 	スレッドのメッセージキューにメッセージを置く
+PostQuitMessage 	スレッドが終了していることをWindowsに通知
+PostThreadMessage 	メッセージをスレッドにポスト
+RegisterWindowMessage 	新しい一意なウィンドウメッセージを定義
+ReplyMessage 	SendMessageにより送られたメッセージに応答
+SendAsyncProc 	メッセージ処理の結果を取得
+SendDlgItemMessage 	メッセージをダイアログボックスに送信
+SendMessage 	メッセージをウィンドウプロシージャに送信
+SendMessageCallback 	メッセージをウィンドウプロシージャに送信
+SendMessageTimeout 	メッセージをウィンドウプロシージャに送信
+SendNotifyMessage 	メッセージをウィンドウプロシージャに送信
+SetMessageQueue 	メッセージ キューを作成
+TranslateAccelerator 	アクセラレータキーを処理
+TranslateMessage 	仮想キーメッセージを変換
+WaitMessage 	アプリケーションを中断させて制御を譲渡
+
+
+*******************************************************************************
+*******************************************************************************
+
+
+メッセージの種類
+　メッセージは、大きく分けて、Ｗｉｎｄｏｓの本体が処理するものと、コントロールやマルチメディアのためのものがあります。
+
+メッセージ 	通知 	種類 	内容
+ACM_XXX 	ACN_XXX 	Common 	アニメーションコントロールメッセージ
+BM_XXX 	BN_XXX 	Control 	ボタンメッセージ
+CB_XXX 	CBN_XXX 	Control 	コンボボックスメッセージ
+CDM_XXX 	CDN_XXX 	　 	コモンダイアログボックスメッセージ
+CPL_XXX 	　 	　 	コントロールパネルメッセージ
+DBT_XXX 	　 	　 	デバイスメッセージ
+DL_XXX 	　 	Common 	ドラッグリストメッセージ
+DM_XXX 	　 	Dialog 	ダイアログボックスメッセージ
+EM_XXX 	EN_XXX 	Control 	エディトコントロールメッセージ
+HDM_XXX 	HDN_XXX 	Common 	ヘッダーコントロールメッセージ
+HKM_XXX 	　 	Common 	ホットキーコントロールメッセージ
+ICM_XXX 	　 	Media 	ビデオ圧縮メッセージ
+LB_XXX 	LBN_XXX 	Control 	リストボックスメッセージ
+LVM_XXX 	LVN_XXX 	Common 	リストビューコントロールメッセージ
+MCIWNDM_XXX 	　 	Media 	ＭＣＩウィンドウメッセージ
+MIM_XXX 	　 	Media 	ＭＩＤＩ入力デバイスコールバックメッセージ
+MM_XXX 	　 	Media 	マルチメディアメッセージ
+MMIOM_XXX 	　 	Media 	マルチメディアＩ／Ｏメッセージ
+MOM_XXX 	　 	Media 	ＭＩＤＩ出力デバイスコールバックメッセージ
+　 	NM_XXX 	System 	通知メッセージ
+PBM_XXX 	　 	Common 	プログレスバーメッセージ
+PSM_XXX 	PSN_XXX 	Common 	プロパティシートメッセージ
+SB_XXX 	　 	Common 	ステータスウィンドウメッセージ
+SBM_XXX 	　 	Control 	スクロールバーメッセージ
+STM_XXX 	STN_XXX 	Control 	スタティックコントロールメッセージ
+TB_XXX 	　 	Common 	ツールバーメッセージ
+TBM_XXX 	TBN_XXX 	Common 	トラックバーメッセージ
+TCM_XXX 	TCN_XXX 	Common 	タブコントロールメッセージ
+TTM_XXX 	TTN_XXX 	Common 	ツールヒントメッセージ
+TVM_XXX 	TVN_XXX 	Common 	ツリービューメッセージ
+UDM_XXX 	UDN_XXX 	Common 	スピンボタンコントロールメッセージ
+WIM_XXX 	　 	Media 	ウェーブフォームオーディオ入力メッセージ
+WM_XXX 	　 	System 	Ｗｉｎｄｏｗｓその他の全メッセージ
+WOM_XXX 	　 	Media 	ウェーブフォームオーディオ出力メッセージ
+Control･･･コントロール関連のメッセージ
+Common･･･コモンコントロール関連のメッセージ
+Daialog･･･ダイアログボックス関連のメッセージ
+Medeia･･･マルチメディア関連のメッセージ
+System･･･Ｗｉｎｄｏｗｓの本体のシステム関連のメッセージ
