@@ -2,4 +2,6 @@
 *.a
 *.lib
 *.exe
+
 *.bmp
+*.wav
