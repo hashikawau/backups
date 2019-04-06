@@ -1,0 +1,12 @@
+INPUT(
+./debug/main.o
+./debug/MainWindow.o
+./debug/WaveEditor.o
+./debug/WaveDevice.o
+./debug/wavread.o
+./debug/wavwrite.o
+./debug/wavfile.o
+./debug/qrc_resources.o
+./debug/moc_MainWindow.o
+./debug/moc_WaveEditor.o
+);

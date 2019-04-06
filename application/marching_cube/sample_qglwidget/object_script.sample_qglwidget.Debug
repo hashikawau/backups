@@ -1,0 +1,14 @@
+INPUT(
+./debug/main.o
+./debug/MainWindow.o
+./debug/ShaderProgram.o
+./debug/GLViewer.o
+./debug/Model1.o
+./debug/Model2.o
+./debug/Model3.o
+./debug/Model4.o
+./debug/Model5.o
+./debug/qrc_resources.o
+./debug/moc_MainWindow.o
+./debug/moc_GLViewer.o
+);

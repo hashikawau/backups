@@ -1,0 +1,14 @@
+INPUT(
+./release/main.o
+./release/MainWindow.o
+./release/ShaderProgram.o
+./release/GLViewer.o
+./release/Model1.o
+./release/Model2.o
+./release/Model3.o
+./release/Model4.o
+./release/Model5.o
+./release/qrc_resources.o
+./release/moc_MainWindow.o
+./release/moc_GLViewer.o
+);

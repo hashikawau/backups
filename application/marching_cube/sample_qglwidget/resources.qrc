@@ -1,0 +1,11 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>glsl/cube.png</file>
+    <file>glsl/vshader.glsl</file>
+    <file>glsl/fshader.glsl</file>
+    <file>glsl/vshader_3.glsl</file>
+    <file>glsl/fshader_3.glsl</file>
+    <file>glsl/vshader_4.glsl</file>
+    <file>glsl/fshader_4.glsl</file>
+</qresource>
+</RCC>
