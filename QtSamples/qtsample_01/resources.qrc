@@ -1,0 +1,8 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>images/eclipse16.png</file>
+    <file>images/eclipse32.png</file>
+    <file>images/eclipse48.png</file>
+    <file>images/eclipse256.png</file>
+</qresource>
+</RCC>
